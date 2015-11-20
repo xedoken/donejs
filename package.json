@@ -7,7 +7,8 @@
     "donejs": "./bin/donejs"
   },
   "scripts": {
-    "test": "npm run jshint && npm run mocha",
+    "test": "npm run jshint && npm run mocha && npm run test-guide",
+    "test-guide": "guide node_modules/donejs-chat-guide/run_guide.js --local",
     "jshint": "jshint lib/. bin/donejs test/. --config",
     "mocha": "mocha test/ --timeout 120000",
     "verify": "echo \"Script ran\"",
@@ -36,6 +37,9 @@
   "homepage": "https://github.com/donejs/donejs",
   "devDependencies": {
     "documentjs": "^0.3.0",
+    "donejs-chat-guide": "^0.1.2",
+    "es6-promise": "^3.0.2",
+    "guide-automation": "^0.1.0",
     "jshint": "^2.8.0",
     "mocha": "^2.2.5"
   },
